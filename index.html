@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配手机屏幕 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人信息卡片</title>
+    <style>
+        /* 样式：让卡片美观且居中 */
+        body {
+            /* 页面背景色 */
+            background-color: #f5f5f5;
+            /* 让卡片垂直+水平居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 占满整个屏幕高度 */
+            height: 100vh;
+            /* 去掉页面默认边距 */
+            margin: 0;
+            /* 字体：默认用系统字体，清晰易读 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        /* 卡片容器样式 */
+        .card {
+            /* 卡片背景色 */
+            background-color: white;
+            /* 卡片宽度（手机上自动适配） */
+            width: 350px;
+            /* 内边距：卡片内容和边框的距离 */
+            padding: 25px;
+            /* 圆角：让卡片边角不尖锐 */
+            border-radius: 12px;
+            /* 阴影：让卡片有立体感 */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* 文本居中 */
+            text-align: center;
+        }
+
+        /* 头像样式 */
+        .avatar {
+            /* 头像圆形 */
+            border-radius: 50%;
+            /* 头像大小 */
+            width: 120px;
+            height: 120px;
+            /* 头像边框：轻微装饰 */
+            border: 3px solid #eee;
+            /* 避免头像变形 */
+            object-fit: cover;
+        }
+
+        /* 姓名样式 */
+        .name {
+            font-size: 24px;
+            color: #333;
+            margin: 15px 0 5px 0;
+        }
+
+        /* 身份标签（比如“前端学习者”） */
+        .tag {
+            font-size: 14px;
+            color: #666;
+            background-color: #f0f7ff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* 简介样式 */
+        .intro {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* 联系方式容器 */
+        .contact {
+            /* 让联系方式横向排列 */
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* 联系方式按钮 */
+        .contact-btn {
+            text-decoration: none;
+            color: #2d7ff9;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* 鼠标 hover 按钮时变色 */
+        .contact-btn:hover {
+            color: #1a68e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 卡片主体：所有信息都放在这个容器里 -->
+    <div class="card">
+        <!-- 头像：替换成自己的图片链接（网络图或本地图都可以） -->
+        <img src="https://img.icons8.com/fluency/96/000000/person-male.png" alt="我的头像" class="avatar">
+        
+        <!-- 姓名：替换成自己的名字 -->
+        <h2 class="name">LearnX每日记</h2>
+        
+        <!-- 身份标签：替换成自己的身份（比如“后端开发学习者”“Python入门者”） -->
+        <div class="tag">前端开发学习者</div>
+        
+        <!-- 个人简介：替换成自己的简介（1-2句话即可） -->
+        <p class="intro">
+            喜欢探索新技术，目前正在学习HTML/CSS/JavaScript，
+            目标是成为一名全栈开发工程师～
+        </p>
+        
+        <!-- 联系方式：替换成自己的信息 -->
+        <div class="contact">
+            <a href="tencent://message/?uin=352543836"class="contact-btn">📱 QQ：3525343363</a>
+            <a href="mailto:35253433@qq.com" class="contact-btn">📧 邮箱：3525343363@qq.com</a>
+        </div>
+    </div>
+</body>
+</html>
